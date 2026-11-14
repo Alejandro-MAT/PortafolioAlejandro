@@ -1,11 +1,60 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
+import { Code2, Github, Linkedin } from "lucide-astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alejandro | Desarrollador Web Frontend</title>
+    <meta name="description" content="Portafolio profesional de Alejandro — Desarrollador Web Frontend especializado en Astro, TypeScript y Tailwind CSS." />
+  </head>
+  <body class="min-h-screen bg-[#0F172A] text-[#F8FAFC] flex items-center justify-center px-6">
+    <main class="max-w-xl w-full text-center flex flex-col items-center gap-6 bg-[#1E293B] border border-[#334155] rounded-2xl p-8 md:p-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[#10B981] font-mono text-xs">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Portafolio en construcción • Disponible para trabajar</span>
+      </div>
+
+      <div class="p-3 bg-emerald-500/10 rounded-xl border border-emerald-500/20 text-[#10B981]">
+        <Code2 class="w-8 h-8" />
+      </div>
+
+      <div class="space-y-2">
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+          Hola, soy <span class="text-[#10B981]">Alejandro</span>
+        </h1>
+        <p class="text-[#94A3B8] text-base">
+          Desarrollador Web Frontend • Astro, TypeScript &amp; Tailwind CSS
+        </p>
+      </div>
+
+      <p class="text-sm text-[#94A3B8] leading-relaxed">
+        Estoy preparando la nueva versión de mi portafolio interactivo. Mientras tanto, puedes revisar mi código y proyectos publicados en mis perfiles:
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-3 pt-2">
+        <a
+          href="https://github.com/TU-USUARIO"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-[#10B981] hover:bg-[#34D399] text-slate-950 font-bold px-5 py-2.5 rounded-lg transition-colors"
+        >
+          <Github class="w-4 h-4" />
+          <span>Ver GitHub</span>
+        </a>
+        <a
+          href="https://linkedin.com/in/TU-USUARIO"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 border border-[#334155] hover:border-[#10B981] text-[#F8FAFC] font-semibold px-5 py-2.5 rounded-lg transition-colors"
+        >
+          <Linkedin class="w-4 h-4 text-[#10B981]" />
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
